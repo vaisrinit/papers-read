@@ -92,56 +92,70 @@
 	
 	%------------------------------------------------
 	
-	\begin{frame}{Multiple Columns}
+	\begin{frame}{General Framework for CF Fairness}
 		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 			
 			\column{.45\textwidth} % Left column and width
-			\textbf{Heading}
+			\textbf{Steps involved}
 			\begin{enumerate}
-				\item Statement
-				\item Explanation
-				\item Example
+				\item Counterfactual Augmentation
+				\item Minimize Discrepancy (Optimization Problem)
 			\end{enumerate}
 			
 			\column{.45\textwidth} % Right column and width
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+			Possible Research Problems that can be explored
+			\begin{enumerate}
+				\item Applying Different kinds of Augmentation Techniques
+			\end{enumerate}
 			
 		\end{columns}
 	\end{frame}
 	
 	%------------------------------------------------
-	\section{Counterfactual Learning}
+	\section{Counterfactual Explanations}
 	%------------------------------------------------
-	\begin{frame}{Counterfactual Learning}
+	\begin{frame}{Counterfactual Explanations}
+		\textbf{Motivation}
 		\begin{itemize}
-			\item Counterfactual learning gives a chance to alleviate the intrinsic bias making models interpretable and exploiting the information stored in data well
-			\item Counterfactual comes from the research community of causal inference. 
-			\item 2 main concepts
+			\item Transparent and interpretable models are essential to ensure that developers understand model behavior and potential biases, and to gain user trust
+			\item In drug discovery, GNN interpretations can aid in discovering effective molecular structures
+		\end{itemize}
+		\begin{block}{Definition}
+			Counterfactual explanation on graphs aims to identify the necessary changes to the input graph that can alter the prediction outcome
+		\end{block}
+	\end{frame}
+	\begin{frame}{General Framework for CF Explanation}
+		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+			
+			\column{.45\textwidth} % Left column and width
+			\textbf{Steps involved}
 			\begin{enumerate}
-				\item Counterfactual Fairness: prediction for an individual is 			fair if it remains the same in a counterfactual world where the individual belongs to a different demographic	group
-				\item Counterfactual Explanation
+				\item Graph counterfactual candidate representation
+				\item Optimization
 			\end{enumerate}
-			\item Besides the aid on fairness and interpretability, the research community also utilizes counterfactual learning to provide additional information from the counterfactual world \cite{p1}
-		\end{itemize}
+			
+			\column{.45\textwidth} % Right column and width
+			Possible Research Problems that can be explored
+			\begin{enumerate}
+				\item Coming up with different candidate representation
+			\end{enumerate}
+			
+		\end{columns}
+		
+		\hfill
+		
+		As discussed in the previous presentation, this can be linked with Pharmacovigilance domain
 	\end{frame}
-	\begin{frame}{Counterfactual Learning cont..}
+	\section{CF Link Prediction \& Recommendation}
+	\begin{frame}{CF Link Prediction \& Recommendation}
+		\textbf{Motivation}
 		\begin{itemize}
-			\item Compared with traditional statistical models, causal 		models have better generalization ability in modeling real-world systems
+			\item Previous 2 methods are closely related to graph classification tasks
+			\item Recommender systems, as a special case of link prediction task, can also benefit from removing spurious information and relying on causal information
 		\end{itemize}
-	\end{frame}
-	\begin{frame}{Counterfactual Learning}
-		\begin{table}
-			\begin{tabular}{l l l}
-				\toprule
-				\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
-				\midrule
-				Treatment 1         & 0.0003262           & 0.562               \\
-				Treatment 2         & 0.0015681           & 0.910               \\
-				Treatment 3         & 0.0009271           & 0.296               \\
-				\bottomrule
-			\end{tabular}
-			\caption{Table caption}
-		\end{table}
+		\begin{block}{Definition}
+			Counterfactual Link prediction aims to explore the root causes of the formation of links, filtering out the spurious factors
+		\end{block}
 	\end{frame}
 	
 	%------------------------------------------------
@@ -163,7 +177,7 @@
 	
 	
 	
-	\section{Counterfactual Learning on Graphs}
+
 	\begin{frame}{Counterfactual Learning on Graphs}
 		\begin{itemize}
 			\item Recent works on graph counterfactual learning have shown great potential to overcome the aforementioned challenges 	on fairness, explanation, etc.
